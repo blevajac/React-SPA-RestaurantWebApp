@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 
 import { compose, withProps, lifecycle, withStateHandlers } from "recompose";
@@ -103,23 +104,23 @@ const MapWithASearchBox = compose(
   >
     {/*Lokacija marker postavljen na sam centar trga (koji nema parkioralište, a pokazivać puta gleda promet stvaraju se dupli markeri*/}
       {props.isMainMarker ? (
-        <Marker
-          position={{ lat: 45.8131545, lng: 15.9767975 }}
-          onClick={props.onToggleOpen}
-        >
-            {props.isOpen && <InfoWindow onCloseClick={props.onToggleOpen}>
-              <div>
-                <MdRestaurantMenu />
-                {" "}
-                Gourmet, au Gulaš
-                {" "}
-                <MdRestaurantMenu />
-                {" "}
-              </div>
-          </InfoWindow>}
-        </Marker>
+          <Marker
+            position={{ lat: 45.8131545, lng: 15.9767975 }}
+            onClick={props.onToggleOpen}
+          >
+              {props.isOpen && <InfoWindow onCloseClick={props.onToggleOpen}>
+                <div>
+                  <MdRestaurantMenu />
+                  {" "}
+                  Gourmet, au Gulaš!
+                  {" "}
+                  <MdRestaurantMenu />
+                  {" "}
+                </div>
+            </InfoWindow>}
+          </Marker>
       ) : (
-        props.directions && <DirectionsRenderer directions={props.directions} />
+          props.directions && <DirectionsRenderer directions={props.directions} />
       )}
 
     <SearchBox
@@ -130,12 +131,12 @@ const MapWithASearchBox = compose(
     >
       <input
         type="text"
-        placeholder="Please, Enter your location."        
+        placeholder="For getting directions. Please, Enter your location."
         style={{
           boxSizing: `border-box`,
           border: `1px solid transparent`,
-          width: `240px`,
-          height: `32px`,
+          width: `380px`,
+          height: `40px`,
           marginTop: `20px`,
           padding: `0 12px`,
           borderRadius: `3px`,
@@ -150,20 +151,51 @@ const MapWithASearchBox = compose(
 );
 
 
-const Map = () => (
+const Map = ({ resInformation, address }) => (
   <div className="w3-row w3-padding-64" id="about">
     <div className="w3-col m6 w3-padding-large w3-hide-small">
       <MapWithASearchBox />
     </div>
 
     <div className="w3-col m6 w3-padding-large">
-      <h1 className="w3-center">About Catering</h1><br></br>
-
-      <h5 className="w3-center">Tradition since 1889</h5>
-      <p className="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use <span className="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
-      <p className="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1 className="w3-center">{resInformation.restaurantName}</h1>
+      <h5 className="w3-center">Tradition since 1889</h5><br></br>
+      
+      <p className="w3-text-blue-grey w3-large"><b>{address.street} {address.number}, {address.zipcode} {address.city}, {address.country} </b></p><br></br>
+      <p>U can contact us all day from 10:00 am - 17:00 pm CET </p>
+      <p><strong>Contact number:</strong> <br></br>
+          Phone number: { resInformation.telephone }<br></br>
+          Mobile number: { resInformation.mobile }
+      </p>
+      <p><strong>Working hours:</strong><br></br>
+          Monday - Friday: 9:00 am - 11:00 pm ET <br></br>
+          Saturday - Sunday: 9:00 am - 11:00 pm ET
+      </p>
+      <br></br>
+      <p className="w3-large w3-text-grey w3-hide-medium">
+        For larger Events, Weddings, Presentations, or Catering please call us between <em> 10:00 am - 12:00 am</em> CET. <br></br>
+        For Smaller orders and deliveries  please call us all day till <em>17:00 pm</em> CET.<br></br>
+        For all other Orders, Reservations, or Information our operators will be on standby all day till <em>17:00 pm</em> CET.
+      </p>
     </div>
   </div>
 );
 
 export default Map;
+
+Map.propTypes = {
+  resInformation: PropTypes.shape({
+    description: PropTypes.string.isRequired,
+    restaurantName: PropTypes.string.isRequired,
+    telephone: PropTypes.string.isRequired,
+    mobile: PropTypes.string.isRequired,
+    website: PropTypes.string.isRequired
+  }).isRequired,
+  address: PropTypes.shape({
+    street: PropTypes.string.isRequired,
+    number: PropTypes.number.isRequired,
+    zipcode: PropTypes.number.isRequired,
+    city: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired
+  }).isRequired,
+};

@@ -6,7 +6,7 @@ const Contact = ({ resInformation, address }) => (
     <h1>Contact</h1><br></br>
 
     <p>{ resInformation.description }</p>
-    <p className="w3-text-blue-grey w3-large"><b>{resInformation.restaurantName}. {address.street} {address.number}, {address.zipcode} {address.city}, {address.country} </b></p>
+    <p className="w3-text-blue-grey w3-large"><b>{resInformation.restaurantName} {address.street} {address.number}, {address.zipcode} {address.city}, {address.country} </b></p>
     <p>You can also contact us by phone <strong>{ resInformation.telephone }</strong> or email <strong>{ resInformation.website }</strong>, or you can send us a message here:</p>
 
     <form onChange={this.readOnly} target="_blank">
@@ -20,7 +20,6 @@ const Contact = ({ resInformation, address }) => (
 );
 
 export default Contact;
-
 
 Contact.propTypes = {
   resInformation: PropTypes.shape({

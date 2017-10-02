@@ -22,7 +22,7 @@ class ContactComponent extends Component {
     return (
       <div className="">
         <Contact {...this.state.contactData} />
-        <Map />
+        <Map {...this.state.contactData}/>
 
       </div>
     );
