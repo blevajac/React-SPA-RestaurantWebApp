@@ -1,0 +1,32 @@
+{
+  "resInformation": {
+    "restaurantName": "Gourmet, au Gulaš",
+    "companyName": "Gourmet, au Gulaš",
+    "logo": "Restaurant logo",
+    "telephone": "+(385) 1 951 NaN",
+    "mobile": "+(385) 95 951 NaN",
+    "website": "http://localhost:3000",
+    "description": "We offer full-service restaurant and catering experience for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us."
+  },
+  "category": [
+    "Pizzaria",
+    "Bar/Pub",
+    "Lanchonete",
+    "Restaurante",
+    "Catering"
+  ],
+  "kitchen": [
+    "Croatian",
+    "Dalmatinska",
+    "Slavonska"
+  ],
+  "address": {
+    "country": "Hrvatska",
+    "city": "Zagreb",
+    "street": "Trg bana Josipa Jelačića",
+    "number": 1,
+    "complement": "",
+    "zipcode": 10000,
+    "cords": [ 45.8131545,  15.9767975 ]
+  }
+}
