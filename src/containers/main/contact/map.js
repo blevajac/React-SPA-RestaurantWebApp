@@ -8,6 +8,7 @@ import {
   withGoogleMap,
   GoogleMap,
   Marker,
+  DirectionsRenderer,
 } from "react-google-maps";
 import SearchBox from "react-google-maps/lib/components/places/StandaloneSearchBox";
 
@@ -25,9 +26,10 @@ const MapWithASearchBox = compose(
       this.setState({
         bounds: null,
         center: {
-           lat: 45.8131545, lng: 15.9767975 
+           lat: 45.8131545, lng: 15.9767975
         },
         markers: [],
+        isLoggedIn: true,
         onMapMounted: ref => {
           refs.map = ref;
         },
@@ -43,6 +45,7 @@ const MapWithASearchBox = compose(
         onPlacesChanged: () => {
           const places = refs.searchBox.getPlaces();
           const bounds = new google.maps.LatLngBounds();
+          const DirectionsService = new google.maps.DirectionsService();
 
           places.forEach(place => {
             if (place.geometry.viewport) {
@@ -60,7 +63,22 @@ const MapWithASearchBox = compose(
             center: nextCenter,
             markers: nextMarkers,
           });
-          // refs.map.fitBounds(bounds);
+
+          DirectionsService.route({
+            origin: new google.maps.LatLng(45.8131545, 15.9767975),
+            destination: new google.maps.LatLng(this.state.center.lat(), this.state.center.lng()),
+            travelMode: google.maps.TravelMode.DRIVING,
+          }, (result, status) => {
+            if (status === google.maps.DirectionsStatus.OK) {
+              this.setState({
+                directions: result,
+                isLoggedIn: false
+              });
+            } else {
+              console.error(`error fetching directions ${result}`);
+            }
+          });
+           refs.map.fitBounds(bounds);
         },
       })
     },
@@ -74,6 +92,16 @@ const MapWithASearchBox = compose(
     center={props.center}
     onBoundsChanged={props.onBoundsChanged}
   >
+    {/*Lokacija marker postavljen na sam centar trga (koji nema parkioralište, a pokazivać puta gleda promet stvaraju se dupli markeri*/}
+      {props.isLoggedIn ? (
+        <Marker
+          position={{ lat: 45.8131545, lng: 15.9767975 }}
+          onClick={props.onToggleOpen}
+        />
+      ) : (
+        props.directions && <DirectionsRenderer directions={props.directions} />
+      )}
+
     <SearchBox
       ref={props.onSearchBoxMounted}
       bounds={props.bounds}
@@ -98,9 +126,9 @@ const MapWithASearchBox = compose(
         }}
       />
     </SearchBox>
-    {props.markers.map((marker, index) =>
-      <Marker key={index} position={marker.position} />
-    )}
+
+
+
   </GoogleMap>
 );
 
