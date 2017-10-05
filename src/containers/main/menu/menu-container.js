@@ -21,12 +21,14 @@ class MenuContainer extends Component {
 
   todaySpecialMenu = () => {
     const todayDay = h.todayDay();
+
     return  todaySpecialMenu.menu.map((menu, id) => {
       if(menu.id === todayDay) {
         return (
           <TodaysSpecialMenu key={id} todaySpecialMenu={menu} />
         );
       }
+      return null
     });
   }
 
