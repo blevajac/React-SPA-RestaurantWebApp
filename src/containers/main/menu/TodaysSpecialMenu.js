@@ -1,28 +1,32 @@
 import React from 'react';
 
-const TodaysSpecialMenu = () => (
+//helper functions
+import h from '../../../helper-functions/helpers';
+//h.formatPrice(count * fish.price)
+
+const TodaysSpecialMenu = ({ todaySpecialMenu }) => (
   <div className="w3-row w3-padding-64" id="menu">
     <div className="w3-col l6 w3-padding-large">
       <h1 className="w3-center">Today's special Menu</h1>
       <br></br>
-      <h4>Bread Basket</h4>
-      <p className="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br></br>
+      <h4>{ todaySpecialMenu.extras.name }</h4>
+      <p className="w3-text-grey">{ todaySpecialMenu.extras.description } { h.formatPrice(todaySpecialMenu.extras.price) }</p><br></br>
 
-      <h4>Honey Almond Granola with Fruits</h4>
-      <p className="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br></br>
+      <h4>{ todaySpecialMenu.app_snacks.name }</h4>
+      <p className="w3-text-grey">{ todaySpecialMenu.app_snacks.description } { h.formatPrice(todaySpecialMenu.app_snacks.price) }</p><br></br>
 
-      <h4>Belgian Waffle</h4>
-      <p className="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br></br>
+      <h4>{ todaySpecialMenu.salads.name }</h4>
+      <p className="w3-text-grey">{ todaySpecialMenu.salads.description } { h.formatPrice(todaySpecialMenu.salads.price) }</p><br></br>
 
-      <h4>Scrambled eggs</h4>
-      <p className="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br></br>
+      <h4>{ todaySpecialMenu.main.name }</h4>
+      <p className="w3-text-grey">{ todaySpecialMenu.main.description } { h.formatPrice(todaySpecialMenu.main.price) }</p><br></br>
 
-      <h4>Blueberry Pancakes</h4>
-      <p className="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
+      <h4>{ todaySpecialMenu.dessert.name }</h4>
+      <p className="w3-text-grey">{ todaySpecialMenu.dessert.description } { h.formatPrice(todaySpecialMenu.dessert.price) }</p>
     </div>
 
     <div className="w3-col l6 w3-padding-large">
-      <img src="https://www.w3schools.com/w3images/tablesetting.jpg" className="w3-round w3-image w3-opacity-min" alt="Menu" width="500" height="750" />
+      <img src={ todaySpecialMenu.img } className="w3-round w3-image w3-opacity-min" alt="Menu" width="500" height="750" />
     </div>
   </div>
 );

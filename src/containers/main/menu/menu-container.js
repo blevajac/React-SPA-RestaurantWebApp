@@ -5,6 +5,9 @@ import React, { Component } from 'react';
 //data
 import todaySpecialMenu from '../../../data/special-menu.json';
 
+//helper functions
+import h from '../../../helper-functions/helpers';
+
 //components
 import TodaysSpecialMenu from './TodaysSpecialMenu';
 
@@ -16,18 +19,21 @@ class MenuContainer extends Component {
     };
   }
 
-  componentDidMount() {
-    this.getTodaysMenu();
-  }
-
-  getTodaysMenu() {
-    
+  todaySpecialMenu = () => {
+    const todayDay = h.todayDay();
+    return  todaySpecialMenu.menu.map((menu, id) => {
+      if(menu.id === todayDay) {
+        return (
+          <TodaysSpecialMenu key={id} todaySpecialMenu={menu} />
+        );
+      }
+    });
   }
 
   render() {
     return (
       <div className="">
-        <TodaysSpecialMenu {...this.state.todaySpecialMenu}/>
+        {this.todaySpecialMenu()}
       </div>
     );
   }

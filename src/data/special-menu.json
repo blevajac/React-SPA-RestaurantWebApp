@@ -1,205 +1,205 @@
 {
   "menu":  [
       {
-        "id": 0,
-        "app&snacks": {
+        "id": 1,
+        "app_snacks": {
           "name": "Honey Almond Granola with Fruits",
           "description": "Natural cereal of honey toasted oats, raisins, almonds and dates",
-          "price": 700
+          "price": 70
         },
         "salads": {
-          "name": "Strawberry Fields Salad w/ Grilled Chicken",
+          "name": "Strawberry Fields Salad with Grilled Chicken",
           "description": "Fresh balsamic-marinated strawberries, mixed greens, shaved Parmesan, goat cheese, glazed pecans. Tossed in Balsamic Vinaigrette",
-          "price": 750
+          "price": 75
         },
         "main": {
           "name": "Scrambled eggs",
           "description": "Scrambled eggs, roasted red pepper and garlic, with green onions",
-          "price": 750
+          "price": 75
         },
         "dessert": {
           "name": "Blueberry Pancakes",
           "description": "With syrup, butter and lots of berries",
-          "price": 850
+          "price": 85
         },
         "extras": {
           "name": "Bread Basket",
           "description": "Assortment of fresh baked fruit breads and muffins",
-          "price": 550
-        },
-        "img": "https://www.w3schools.com/w3images/tablesetting.jpg"
-      },
-      {
-        "id": 1,
-        "app&snacks": {
-          "name": "SESAME JACK CHICKEN STRIPS",
-          "description": "Panko-crusted chicken breast strips tossed in Jack Daniel’s® glaze",
-          "price": 700
-        },
-        "salads": {
-          "name": "MILLION DOLLAR COBB",
-          "description": "Grilled all-natural chicken, romaine and kale, avocado, tomato, chopped egg, smoked bacon, blue cheese, red onion, cucumber, cheddar cheese. Green Goddess dressing on the sid",
-          "price": 750
-        },
-        "main": {
-          "name": "RIB-EYE",
-          "description": "10 ounces of our most tender cut with generous marbling. Served with mashed potatoes and lemon-butter broccoli",
-          "price": 750
-        },
-        "dessert": {
-          "name": "BROWNIE OBSESSION",
-          "description": "A warm fudge brownie, vanilla ice cream, Ghirardelli® caramel sauce & pecans",
-          "price": 850
-        },
-        "extras": {
-          "name": "Bread Basket",
-          "description": "Assortment of fresh baked fruit breads and muffins",
-          "price": 550
+          "price": 55
         },
         "img": "https://www.w3schools.com/w3images/tablesetting.jpg"
       },
       {
         "id": 2,
-        "app&snacks": {
-          "name": "CHICKEN TOSTADO NACHOS",
-          "description": "Crispy tortillas loaded with chipotle chicken, black beans, chorizo poblano queso, Cotija cheese, pico de gallo and fresh jalapeños. Drizzled with chipotle aioli. Served with salsa and house-made guacamole",
-          "price": 700
+        "app_snacks": {
+          "name": "Sesame Jack Chicken Strips",
+          "description": "Panko-crusted chicken breast strips tossed in Jack Daniel’s glaze",
+          "price": 70
         },
         "salads": {
-          "name": "CAESAR SALAD W/ GRILLED CHICKEN",
-          "description": "Romaine and kale, tossed in Caesar dressing. Topped with Parmesan and Romano cheeses, Asiago croutons and Parmesan crisps. Served with grilled lemon",
-          "price": 750
+          "name": "Million Dollar Cobb",
+          "description": "Grilled all-natural chicken, romaine and kale, avocado, tomato, chopped egg, smoked bacon, blue cheese, red onion, cucumber, cheddar cheese. Green Goddess dressing on the sid",
+          "price": 75
         },
         "main": {
-          "name": "FLAT IRON",
-          "description": "8-ounce top blade steak with rich flavor. Served with mashed potatoes and lemon-butter broccoli",
-          "price": 750
+          "name": "Rib-Eye",
+          "description": "10 ounces of our most tender cut with generous marbling. Served with mashed potatoes and lemon-butter broccoli",
+          "price": 75
         },
         "dessert": {
-          "name": "VANILLA BEAN CHEESECAKE",
-          "description": "Silky white chocolate mousse, graham cracker crust, white chocolate shavings",
-          "price": 850
+          "name": "Brownie Obsession",
+          "description": "A warm fudge brownie, vanilla ice cream, Ghirardelli caramel sauce",
+          "price": 85
         },
         "extras": {
           "name": "Bread Basket",
           "description": "Assortment of fresh baked fruit breads and muffins",
-          "price": 550
+          "price": 55
         },
         "img": "https://www.w3schools.com/w3images/tablesetting.jpg"
       },
       {
         "id": 3,
-        "app&snacks": {
-          "name": "SPINACH & QUESO DIP",
-          "description": "Fresh spinach, white cheddar queso, Parmesan and bread crumbs. Served with tortilla chips, salsa and house-made guacamole",
-          "price": 700
+        "app_snacks": {
+          "name": "Chicken Tostad Nachos",
+          "description": "Crispy tortillas loaded with chipotle chicken, black beans, chorizo poblano queso, Cotija cheese, pico de gallo and fresh jalapeños. Drizzled with chipotle aioli. Served with salsa and house-made guacamole",
+          "price": 70
         },
         "salads": {
-          "name": "BBQ CHICKEN SALAD ",
-          "description": "Grilled BBQ all-natural chicken, romaine and kale, green onion, tomato, black beans and corn, cucumber, red onion, cilantro, cheddar, avocado, bacon and tortilla chips. Tossed in BBQ Ranch dressing and topped with Cajun-spiced onion strings",
-          "price": 750
+          "name": "Caesar Salad with Grilled Chicken",
+          "description": "Romaine and kale, tossed in Caesar dressing. Topped with Parmesan and Romano cheeses, Asiago croutons and Parmesan crisps. Served with grilled lemon",
+          "price": 75
         },
         "main": {
-          "name": "PARMESAN-CRUSTED CHICKEN",
-          "description": "All-natural chicken served with cheddar mac and cheese and fresh tomato mozzarella salad",
-          "price": 750
+          "name": "Flat Iron",
+          "description": "8-ounce top blade steak with rich flavor. Served with mashed potatoes and lemon-butter broccoli",
+          "price": 75
         },
         "dessert": {
-          "name": "OREO MADNESS ",
-          "description": "Cookies & Cream ice cream, Oreo® cookie crust, Ghirardelli® chocolate sauce",
-          "price": 850
+          "name": "Vanilla Bean Cheesecake",
+          "description": "Silky white chocolate mousse, graham cracker crust, white chocolate shavings",
+          "price": 85
         },
         "extras": {
           "name": "Bread Basket",
           "description": "Assortment of fresh baked fruit breads and muffins",
-          "price": 550
+          "price": 55
         },
         "img": "https://www.w3schools.com/w3images/tablesetting.jpg"
       },
       {
         "id": 4,
-        "app&snacks": {
-          "name": "PAN-SEARED POT STICKERS",
-          "description": "Steamed, pan-seared pork dumplings with Szechwan dipping sauce.",
-          "price": 700
+        "app_snacks": {
+          "name": "Spinach-Queso Dip",
+          "description": "Fresh spinach, white cheddar queso, Parmesan and bread crumbs. Served with tortilla chips, salsa and house-made guacamole",
+          "price": 70
         },
         "salads": {
-          "name": "PECAN-CRUSTED CHICKEN SALAD",
-          "description": "Warm, crispy pecan-crusted chicken breast, romaine and kale, celery, dried sweet cranberries, fresh orange slices, glazed pecans, blue cheese. Tossed in Balsamic Vinaigrette",
-          "price": 750
+          "name": "BBQ Chicken Salad ",
+          "description": "Grilled BBQ all-natural chicken, romaine and kale, green onion, tomato, black beans and corn, cucumber, red onion, cilantro, cheddar, avocado, bacon and tortilla chips. Tossed in BBQ Ranch dressing and topped with Cajun-spiced onion strings",
+          "price": 75
         },
         "main": {
-          "name": "BOURBON BARREL CHICKEN",
-          "description": "All-natural chicken breast seasoned with hickory-smoked sea salt and fire-grilled over a bourbon-soaked plank to bring out a smoky vanilla sweetness. Served with mashed potatoes and lemon-butter broccoli",
-          "price": 750
+          "name": "Parmesan-Crusted Chicken",
+          "description": "All-natural chicken served with cheddar mac and cheese and fresh tomato mozzarella salad",
+          "price": 75
         },
         "dessert": {
-          "name": "TENNESSEE WHISKEY CAKE",
-          "description": "Toffee cake, candied pecans, vanilla ice cream. Butterscotch Jack Daniel’s® Whiskey sauce",
-          "price": 850
+          "name": "Oreo Surprise",
+          "description": "Cookies-Cream ice cream, Oreo cookie crust, Ghirardelli chocolate sauce",
+          "price": 85
         },
         "extras": {
           "name": "Bread Basket",
           "description": "Assortment of fresh baked fruit breads and muffins",
-          "price": 550
+          "price": 55
         },
         "img": "https://www.w3schools.com/w3images/tablesetting.jpg"
       },
       {
         "id": 5,
-        "app&snacks": {
-          "name": "MOZZARELLA STICKS",
-          "description": "Golden mozzarella blended with Asiago. Topped with Parmesan and Romano cheeses. Served with marinara sauce",
-          "price": 700
+        "app_snacks": {
+          "name": "Pan-Seared Pot Stickers",
+          "description": "Steamed, pan-seared pork dumplings with Szechwan dipping sauce.",
+          "price": 70
         },
         "salads": {
-          "name": "HOUSE SALAD",
-          "description": "Chopped romaine, red cabbage, grape tomato, cucumber, mixed cheese and Asiago croutons with choice of dressing and a hot garlic breadstick",
-          "price": 750
+          "name": "Pecan-Crusted Chicken Salad",
+          "description": "Warm, crispy pecan-crusted chicken breast, romaine and kale, celery, dried sweet cranberries, fresh orange slices, glazed pecans, blue cheese. Tossed in Balsamic Vinaigrette",
+          "price": 75
         },
         "main": {
-          "name": "JACK DANIEL'S CHICKEN",
-          "description": "Two all-natural chicken breasts. Served with mashed potatoes and lemon-butter broccoli",
-          "price": 750
+          "name": "Bourbon Barrel Chicken",
+          "description": "All-natural chicken breast seasoned with hickory-smoked sea salt and fire-grilled over a bourbon-soaked plank to bring out a smoky vanilla sweetness. Served with mashed potatoes and lemon-butter broccoli",
+          "price": 75
         },
         "dessert": {
-          "name": "BANOFFEE PIE",
-          "description": "A biscuit base, topped with rich toffee, cream and fresh caramelised bananas",
-          "price": 850
+          "name": "Tennessee Whiskey Cake",
+          "description": "Toffee cake, candied pecans, vanilla ice cream. Butterscotch Jack Daniel’s Whiskey sauce",
+          "price": 85
         },
         "extras": {
           "name": "Bread Basket",
           "description": "Assortment of fresh baked fruit breads and muffins",
-          "price": 550
+          "price": 55
         },
         "img": "https://www.w3schools.com/w3images/tablesetting.jpg"
       },
       {
         "id": 6,
-        "app&snacks": {
-          "name": "LOADED POTATO SKINS",
-          "description": "Crispy potato halves, melted cheddar and bacon. Served with Ranch sour cream and green onions",
-          "price": 700
+        "app_snacks": {
+          "name": "Mozzarella Sticks",
+          "description": "Golden mozzarella blended with Asiago. Topped with Parmesan and Romano cheeses. Served with marinara sauce",
+          "price": 70
         },
         "salads": {
-          "name": "CAESAR SALAD",
-          "description": "Romaine and kale, tossed in Caesar dressing. Topped with Parmesan and Romano cheeses, Asiago croutons and Parmesan crisps. Served with grilled lemon and a hot garlic breadstick",
-          "price": 750
+          "name": "House Salad",
+          "description": "Chopped romaine, red cabbage, grape tomato, cucumber, mixed cheese and Asiago croutons with choice of dressing and a hot garlic breadstick",
+          "price": 75
         },
         "main": {
-          "name": "SIRLOIN",
-          "description": "10 ounces of flavorful top sirloin. Served with mashed potatoes and lemon-butter broccoli",
-          "price": 750
+          "name": "Jack Daniel's Chicken",
+          "description": "Two all-natural chicken breasts. Served with mashed potatoes and lemon-butter broccoli",
+          "price": 75
         },
         "dessert": {
-          "name": "MILLER’S CHOCOLATE ORANGE",
-          "description": "A shimmering golden globe made from rich chocolate ganache with an orange toffee centre. Served with almond & hazelnut nougatine, peanut butter crumb, zesty orange curd and a refreshing orange sorbet",
-          "price": 850
+          "name": "Banoffee Pie",
+          "description": "A biscuit base, topped with rich toffee, cream and fresh caramelised bananas",
+          "price": 85
         },
         "extras": {
           "name": "Bread Basket",
           "description": "Assortment of fresh baked fruit breads and muffins",
-          "price": 550
+          "price": 55
+        },
+        "img": "https://www.w3schools.com/w3images/tablesetting.jpg"
+      },
+      {
+        "id": 7,
+        "app_snacks": {
+          "name": "Loaded Potato Skins",
+          "description": "Crispy potato halves, melted cheddar and bacon. Served with Ranch sour cream and green onions",
+          "price": 70
+        },
+        "salads": {
+          "name": "Caesar Salad",
+          "description": "Romaine and kale, tossed in Caesar dressing. Topped with Parmesan and Romano cheeses, Asiago croutons and Parmesan crisps. Served with grilled lemon and a hot garlic breadstick",
+          "price": 75
+        },
+        "main": {
+          "name": "Sirolin",
+          "description": "10 ounces of flavorful top sirloin. Served with mashed potatoes and lemon-butter broccoli",
+          "price": 75
+        },
+        "dessert": {
+          "name": "Nalla’s Daemon Chocolate Orange",
+          "description": "A shimmering golden globe made from rich chocolate ganache with an orange toffee centre. Served with almond _ hazelnut nougatine, peanut butter crumb, zesty orange curd and a refreshing orange sorbet",
+          "price": 85
+        },
+        "extras": {
+          "name": "Bread Basket",
+          "description": "Assortment of fresh baked fruit breads and muffins",
+          "price": 55
         },
         "img": "https://www.w3schools.com/w3images/tablesetting.jpg"
       }
