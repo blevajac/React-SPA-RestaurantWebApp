@@ -1,14 +1,39 @@
 import React from 'react';
 
+//components
+import TodaysSpecialMenuCarousel from './TodaysSpecialMenuCarousel';
+
 //helper functions
 import h from '../../../helper-functions/helpers';
 //h.formatPrice(count * fish.price)
 
+const carouselSlidesData = [
+  {
+    day:  "Monday"
+  }, {
+    day:  "Tuesday"
+  }, {
+    day:  "Wednesday"
+  }, {
+    day:  "Thursday"
+  }, {
+    day:  "Friday"
+  }, {
+    day:  "Saturday"
+  }, {
+    day:  "Sunday"
+  }
+];
+
 const TodaysSpecialMenu = ({ todaySpecialMenu }) => (
   <div className="w3-row w3-padding-64" id="menu">
+    <h1 className="w3-center">Today's special Menu</h1>
     <div className="w3-col l6 w3-padding-large">
-      <h1 className="w3-center">Today's special Menu</h1>
+
+      <TodaysSpecialMenuCarousel slides={carouselSlidesData} todaysDate={ todaySpecialMenu.day }/>
+
       <br></br>
+      <p> test day{todaySpecialMenu.day}</p>
       <h4>{ todaySpecialMenu.extras.name }</h4>
       <p className="w3-text-grey">{ todaySpecialMenu.extras.description } { h.formatPrice(todaySpecialMenu.extras.price) }</p><br></br>
 
