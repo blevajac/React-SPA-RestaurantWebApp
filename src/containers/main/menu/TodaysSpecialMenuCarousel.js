@@ -58,12 +58,13 @@ class CarouselSlide extends Component {
             : "carousel__slide"
         }
       >
-        <p className="carousel-slide__content">Today's Menu on: {this.props.slide.day}</p>
+        <p className="carousel-slide__content">Today's Menu: {this.props.slide.name}
 
-        <p>
+          <br></br>
           <strong className="carousel-slide__author">
-            05.10.2017
+            {this.props.slide.day}, 05.10.2017
           </strong>
+          <br></br>
         </p>
       </li>
     );
@@ -78,9 +79,10 @@ class Carousel extends Component {
     this.goToSlide = this.goToSlide.bind(this);
     this.goToPrevSlide = this.goToPrevSlide.bind(this);
     this.goToNextSlide = this.goToNextSlide.bind(this);
+    this.getNewDay = this.getNewDay.bind(this);
 
     this.state = {
-      activeIndex: 0
+      activeIndex: (this.props.todaysDate - 1)
     };
   }
 
@@ -88,6 +90,7 @@ class Carousel extends Component {
     this.setState({
       activeIndex: index
     });
+    this.getNewDay();
   }
 
   goToPrevSlide(e) {
@@ -106,6 +109,7 @@ class Carousel extends Component {
     this.setState({
       activeIndex: index
     });
+    this.getNewDay();
   }
 
   goToNextSlide(e) {
@@ -124,6 +128,13 @@ class Carousel extends Component {
     this.setState({
       activeIndex: index
     });
+    this.getNewDay();
+  }
+
+  getNewDay () {
+    let newDay = this.state.activeIndex;
+    newDay = newDay + 1;
+    this.props.callbackFromParentTSP(newDay);
   }
 
   render() {
@@ -162,3 +173,6 @@ class Carousel extends Component {
 
 // Render Carousel component
 export default Carousel;
+
+//source
+//https://blog.alexdevero.com/create-simple-carousel-react-js/

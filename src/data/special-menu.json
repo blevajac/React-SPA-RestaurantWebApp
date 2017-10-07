@@ -58,7 +58,7 @@
           "description": "Assortment of fresh baked fruit breads and muffins",
           "price": 55
         },
-        "img": "https://www.w3schools.com/w3images/tablesetting.jpg"
+        "img": "https://brooklynhomemaker.files.wordpress.com/2015/07/dsc_00162.jpg"
       },
       {
         "id": 3,
@@ -88,7 +88,7 @@
           "description": "Assortment of fresh baked fruit breads and muffins",
           "price": 55
         },
-        "img": "https://www.w3schools.com/w3images/tablesetting.jpg"
+        "img": "http://2.bp.blogspot.com/-M0N6l_EfS-Q/VgjURCcXY1I/AAAAAAAAXG4/zrVBNCew63o/s1600/pan-seared-steak-with-chimichurri-124.jpg"
       },
       {
         "id": 4,
@@ -118,7 +118,7 @@
           "description": "Assortment of fresh baked fruit breads and muffins",
           "price": 55
         },
-        "img": "https://www.w3schools.com/w3images/tablesetting.jpg"
+        "img": "http://hostthetoast.com/wp-content/uploads/2014/01/12-10-13-518.jpg"
       },
       {
         "id": 5,
@@ -148,7 +148,7 @@
           "description": "Assortment of fresh baked fruit breads and muffins",
           "price": 55
         },
-        "img": "https://www.w3schools.com/w3images/tablesetting.jpg"
+        "img": "https://static1.squarespace.com/static/56f2d76201dbae365c9de18c/58d4138d03596ec3edd5f6fe/58de9c2c1e5b6cdbea101b42/1494516792511/170328OneBourbon_JDH0822.jpg?format=1500w"
       },
       {
         "id": 6,
@@ -178,7 +178,7 @@
           "description": "Assortment of fresh baked fruit breads and muffins",
           "price": 55
         },
-        "img": "https://www.w3schools.com/w3images/tablesetting.jpg"
+        "img": "https://i.pinimg.com/736x/95/d6/56/95d656321eed4c308fe1301d4dd56736--chicken-strip-recipes-jack-daniels.jpg"
       },
       {
         "id": 7,
@@ -200,7 +200,7 @@
         },
         "dessert": {
           "name": "Nalla’s Daemon Chocolate Orange",
-          "description": "A shimmering golden globe made from rich chocolate ganache with an orange toffee centre. Served with almond _ hazelnut nougatine, peanut butter crumb, zesty orange curd and a refreshing orange sorbet",
+          "description": "A shimmering golden globe made from rich chocolate ganache with an orange toffee centre. Served with almond - hazelnut nougatine, peanut butter crumb, zesty orange curd and a refreshing orange sorbet",
           "price": 85
         },
         "extras": {
@@ -208,7 +208,7 @@
           "description": "Assortment of fresh baked fruit breads and muffins",
           "price": 55
         },
-        "img": "https://www.w3schools.com/w3images/tablesetting.jpg"
+        "img": "https://www.twopurplefigs.com/wp-content/uploads/2016/08/Grilled-Sirloin-Steak-with-Cilantro-Corn-Salsa-1.jpg"
       }
     ]
 }

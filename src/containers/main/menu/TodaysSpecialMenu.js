@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 //components
 import TodaysSpecialMenuCarousel from './TodaysSpecialMenuCarousel';
@@ -9,51 +9,72 @@ import h from '../../../helper-functions/helpers';
 
 const carouselSlidesData = [
   {
+    name: "Sweet Fruit Surprise",
     day:  "Monday"
   }, {
+    name: "The Rib-Eye Surprise",
     day:  "Tuesday"
   }, {
+    name: "The Iron Caesar",
     day:  "Wednesday"
   }, {
+    name: "The Crusted Dipped Chicken",
     day:  "Thursday"
   }, {
+    name: "The Drunken Flyer Surprise",
     day:  "Friday"
   }, {
+    name: "Jack's All Night Dinner",
     day:  "Saturday"
   }, {
+    name: "The Mean Sirloin",
     day:  "Sunday"
   }
 ];
 
-const TodaysSpecialMenu = ({ todaySpecialMenu }) => (
-  <div className="w3-row w3-padding-64" id="menu">
-    <h1 className="w3-center">Today's special Menu</h1>
-    <div className="w3-col l6 w3-padding-large">
+class TodaysSpecialMenu extends Component {
+  constructor(props) {
+    super(props);
 
-      <TodaysSpecialMenuCarousel slides={carouselSlidesData} todaysDate={ todaySpecialMenu.day }/>
+    this.callbackFromParent = this.callbackFromParent.bind(this);
+  }
 
-      <br></br>
-      <p> test day{todaySpecialMenu.day}</p>
-      <h4>{ todaySpecialMenu.extras.name }</h4>
-      <p className="w3-text-grey">{ todaySpecialMenu.extras.description } { h.formatPrice(todaySpecialMenu.extras.price) }</p><br></br>
+  callbackFromParent(dataFromChild) {
+    this.props.callbackFromParentMC(dataFromChild);
+  }
 
-      <h4>{ todaySpecialMenu.app_snacks.name }</h4>
-      <p className="w3-text-grey">{ todaySpecialMenu.app_snacks.description } { h.formatPrice(todaySpecialMenu.app_snacks.price) }</p><br></br>
+  render() {
+    const { todaySpecialMenu } = this.props;
+    return (
+        <div className="w3-row w3-padding-64" id="menu">
+            <h1 className="w3-center">Today's special Menu</h1>
+            <div className="w3-col l6 w3-padding-large">
+                <TodaysSpecialMenuCarousel slides={carouselSlidesData} todaysDate={ todaySpecialMenu.id } callbackFromParentTSP={this.callbackFromParent}/>
+              <br></br>
 
-      <h4>{ todaySpecialMenu.salads.name }</h4>
-      <p className="w3-text-grey">{ todaySpecialMenu.salads.description } { h.formatPrice(todaySpecialMenu.salads.price) }</p><br></br>
+              <h4>{ todaySpecialMenu.extras.name }</h4>
+              <p className="w3-text-grey">{ todaySpecialMenu.extras.description } { h.formatPrice(todaySpecialMenu.extras.price) }</p><br></br>
 
-      <h4>{ todaySpecialMenu.main.name }</h4>
-      <p className="w3-text-grey">{ todaySpecialMenu.main.description } { h.formatPrice(todaySpecialMenu.main.price) }</p><br></br>
+              <h4>{ todaySpecialMenu.app_snacks.name }</h4>
+              <p className="w3-text-grey">{ todaySpecialMenu.app_snacks.description } { h.formatPrice(todaySpecialMenu.app_snacks.price) }</p><br></br>
 
-      <h4>{ todaySpecialMenu.dessert.name }</h4>
-      <p className="w3-text-grey">{ todaySpecialMenu.dessert.description } { h.formatPrice(todaySpecialMenu.dessert.price) }</p>
-    </div>
+              <h4>{ todaySpecialMenu.salads.name }</h4>
+              <p className="w3-text-grey">{ todaySpecialMenu.salads.description } { h.formatPrice(todaySpecialMenu.salads.price) }</p><br></br>
 
-    <div className="w3-col l6 w3-padding-large">
-      <img src={ todaySpecialMenu.img } className="w3-round w3-image w3-opacity-min" alt="Menu" width="500" height="750" />
-    </div>
-  </div>
-);
+              <h4>{ todaySpecialMenu.main.name }</h4>
+              <p className="w3-text-grey">{ todaySpecialMenu.main.description } { h.formatPrice(todaySpecialMenu.main.price) }</p><br></br>
+
+              <h4>{ todaySpecialMenu.dessert.name }</h4>
+              <p className="w3-text-grey">{ todaySpecialMenu.dessert.description } { h.formatPrice(todaySpecialMenu.dessert.price) }</p>
+            </div>
+
+            <div className="w3-col l6 w3-padding-large">
+              <img src={ todaySpecialMenu.img } className="w3-round w3-image w3-opacity-min" alt="Menu" width="500" height="750" />
+            </div>
+        </div>
+    );
+  }
+}
+
 
 export default TodaysSpecialMenu;

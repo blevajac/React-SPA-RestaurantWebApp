@@ -35,8 +35,8 @@ ul {
 
 .carousel-slide__content {
   margin-bottom: 19px;
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-size: 22px;
+  font-family: 'Open Sans', 'Trebuchet MS', sans-serif;
+  font-size: 20px;
 }
 @media (max-width: 991px) {
   .carousel-slide__content {
@@ -44,11 +44,13 @@ ul {
   }
 }
 
+.carousel-slide__author,
 .carousel-slide__source {
   font-family: 'Roboto', arial, sans-serif;
   font-size: 14px;
 }
 @media (min-width: 992px) {
+  .carousel-slide__author,
   .carousel-slide__source {
     font-size: 16px;
   }
@@ -86,7 +88,7 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .carousel__indicators li:nth-of-type(n + 2) {
   margin-left: 9px;
