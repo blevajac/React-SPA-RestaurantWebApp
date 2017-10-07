@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+//helper functions
+import h from '../../../helper-functions/helpers';
+
 //css
 import '../../../css/containers/main/menu/TodaysSpecialMenu.css'
 
@@ -50,6 +53,12 @@ class CarouselIndicator extends Component {
 
 class CarouselSlide extends Component {
   render() {
+    let formatedDate;
+
+    if (this.props.index === this.props.activeIndex) {
+      formatedDate = h.calculateDay(this.props.index);
+    }
+
     return (
       <li
         className={
@@ -62,7 +71,7 @@ class CarouselSlide extends Component {
 
           <br></br>
           <strong className="carousel-slide__author">
-            {this.props.slide.day}, 05.10.2017
+            {this.props.slide.day}, {formatedDate}
           </strong>
           <br></br>
         </p>
@@ -82,7 +91,8 @@ class Carousel extends Component {
     this.getNewDay = this.getNewDay.bind(this);
 
     this.state = {
-      activeIndex: (this.props.todaysDate - 1)
+      activeIndex: (this.props.todaysDate - 1),
+      todayDay: h.todayDay()
     };
   }
 
