@@ -1,0 +1,56 @@
+.slider {
+  width: 550px;
+  height: 700px;
+  background: #ddd;
+  position: absolute;
+}
+.slider h1, .slider h2, .slider h3, .slider h4, .slider h5, .slider h6 {
+  margin: 0;
+}
+.slider .slide {
+  height: 100%;
+  width: 100%;
+}
+.slider .dotsContainer {
+  position: absolute;
+  bottom: 7%;
+  width: 100%;
+  text-align: center;
+  z-index: 99999;
+}
+.slider .dotsContainer .dot {
+  background: #222;
+  padding: 0px 8px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 120px;
+}
+.slider .dotsContainer .isCurrent {
+  background: #fff;
+}
+.slider .nextArrow {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  cursor: pointer;
+  transition: all ease-in .2s;
+  color: #fff;
+}
+.slider .nextArrow:hover {
+  opacity: 0.5;
+  transform: scale(1.4);
+  transition: all ease-in .2s;
+}
+.slider .backArrow {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  cursor: pointer;
+  color: #fff;
+  transition: all ease-in .2s;
+}
+.slider .backArrow:hover {
+  opacity: 0.5;
+  transform: scale(1.4);
+  transition: all ease-in .2s;
+}

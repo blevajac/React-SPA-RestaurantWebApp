@@ -10,7 +10,7 @@ class CarouselLeftArrow extends Component {
   render() {
     return (
       <a
-        href="#"
+        href="#CarouselLeftArrow"
         className="carousel__arrow carousel__arrow--left"
         onClick={this.props.onClick}
       >
@@ -24,7 +24,7 @@ class CarouselRightArrow extends Component {
   render() {
     return (
       <a
-        href="#"
+        href="#CarouselRightArrow"
         className="carousel__arrow carousel__arrow--right"
         onClick={this.props.onClick}
       >
@@ -39,13 +39,14 @@ class CarouselIndicator extends Component {
     return (
       <li>
         <a
+          href="#CarouselIndicator"
           className={
             this.props.index === this.props.activeIndex
               ? "carousel__indicator carousel__indicator--active"
               : "carousel__indicator"
           }
           onClick={this.props.onClick}
-        />
+        ></a>
       </li>
     );
   }

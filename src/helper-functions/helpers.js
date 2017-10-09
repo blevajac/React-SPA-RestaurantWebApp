@@ -12,7 +12,7 @@ let helpers =  {
     return todayDay;
   },
   calculateDay : function(nameOfWeek) {
-    let today, todayNumber, dayofWeek, needDayOfWeek, needDay, formatedDate;
+    let today, todayNumber, needDayOfWeek, needDay, formatedDate;
     today = new Date();
     todayNumber = today.getDay();
 
@@ -21,7 +21,7 @@ let helpers =  {
 
     formatedDate = new Date(needDay);
     formatedDate = `${formatedDate.getDate()}.${(formatedDate.getMonth() +1)}.${formatedDate.getFullYear()}`;
-    
+
     return formatedDate;
   }
 
