@@ -20,8 +20,9 @@ const AboutContainer = () => (
             <li className="router-li right-link"><Link to="/gallery">Gallery</Link></li>
           </ul>
           <Route exact path="/" component={About}/>
+          <Route path="/about" component={About}/>
           <Route path="/gallery" component={Gallery}/>
-          
+
     </div>
   </Router>
 )

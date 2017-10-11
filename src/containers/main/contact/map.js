@@ -5,6 +5,7 @@ import _ from 'lodash';
 
 //css
 import '../../../index.css';
+import '../../../css/containers/main/contact/map.css';
 
 import { compose, withProps, lifecycle, withStateHandlers } from "recompose";
 import {
@@ -132,7 +133,7 @@ const MapWithASearchBox = compose(
       controlPosition={google.maps.ControlPosition.BOTTOM_CENTER}
       onPlacesChanged={props.onPlacesChanged}
     >
-      <input
+      <input className="input-position"
         type="text"
         placeholder="For getting directions. Please, Enter your location."
         style={{
@@ -156,7 +157,7 @@ const MapWithASearchBox = compose(
 
 const Map = ({ resInformation, address }) => (
   <div className="w3-row w3-padding-64" id="about">
-    <div className="w3-col m6 w3-padding-large w3-hide-small">
+    <div className="w3-col m6 w3-padding-large w3-hide-small map">
       <MapWithASearchBox />
     </div>
 
