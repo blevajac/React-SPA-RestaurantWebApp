@@ -1,3 +1,4 @@
+//jsx-a11y/anchor-has-conten
 import React, { Component } from 'react';
 
 //helper functions
