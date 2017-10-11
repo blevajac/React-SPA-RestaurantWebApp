@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 //css
-import '../../../css/containers/about/gallery.css';
+import '../../../css/containers/main/about/gallery.css';
+import '../../../index.css';
 
 //data
 import GalleryData from '../../../data/about-gallery-data.json';
@@ -85,38 +86,33 @@ class Gallery extends Component {
 
   render() {
     return (
-      <div className="w3-row w3-padding-64" id="about">       
-
+      <div className="w3-row w3-padding-64" id="about">
         <div>
           <div className="w3-col m6 w3-padding-large w3-hide-small">
-            <div className="w3-round w3-image w3-opacity-min" style={{ width: "600", height: "750" }}>
+              <div className=" w3-round w3-image w3-opacity-min slider" alt="Table Setting" style={{ width: "600", height: "750" }}>
+                    {/* The Current Image*/}
+                    {
+                      this.state.ready ?
+                      <Slide
+                        background={this.state.background}
+                        current={this.state.current}
+                        ready={this.state.ready}
+                      />
+                      : null
+                    }
 
-              <div className="slider">
-                {/* The Current Image*/}
-                {
-                  this.state.ready ?
-                  <Slide
-                    background={this.state.background}
-                    current={this.state.current}
-                    ready={this.state.ready}
-                  />
-                  : null
-                }
+                    {/* Arrows */}
+                    <LeftArrow previousSlide={this.previousSlide} />
+                    <RightArrow nextSlide={this.nextSlide} />
+                    {/* Dots */}
+                    <Dots
+                      numberOfDots={this.state.background.length}
+                      isCurrent={this.state.current}
+                      dotClick={this.dotClick}
+                     />
 
-                {/* Arrows */}
-                <LeftArrow previousSlide={this.previousSlide} />
-                <RightArrow nextSlide={this.nextSlide} />
-                {/* Dots */}
-                <Dots
-                  numberOfDots={this.state.background.length}
-                  isCurrent={this.state.current}
-                  dotClick={this.dotClick}
-                 />
-
-                 {this.preloadNextImage()}
+                     {this.preloadNextImage()}
               </div>
-            </div>
-
           </div>
 
           <div className="w3-col m6 w3-padding-large">

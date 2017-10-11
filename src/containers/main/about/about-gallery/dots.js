@@ -1,6 +1,9 @@
 import React from 'react';
 import Dot from './dot';
 
+//css
+import '../../../../css/containers/main/about/gallery.css';
+
 /*
   Dots is the parent of Dot. It's purpose is to handle the fancy logic, and produce
   child Dot components. These Dot components are pushed into an array, which is

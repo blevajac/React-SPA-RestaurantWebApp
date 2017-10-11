@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+//css
+import '../../../index.css';
+
 const Contact = ({ resInformation, address }) => (
   <div className="w3-container w3-padding-64" id="contact">
     <h1>Contact</h1><br></br>

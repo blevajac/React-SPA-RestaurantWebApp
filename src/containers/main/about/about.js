@@ -1,7 +1,10 @@
 import React from 'react';
 
+//css
+import '../../../index.css';
+
 const About = () => (
-  <div className="w3-row w3-padding-64" id="about">    
+  <div className="w3-row w3-padding-64" id="about">
     <div>
         <div className="w3-col m6 w3-padding-large w3-hide-small">
           <img src="https://www.w3schools.com/w3images/tablesetting2.jpg" className="w3-round w3-image w3-opacity-min" alt="Table Setting" style={{ width: "600", height: "750" }} />

@@ -5,6 +5,7 @@ import h from '../../../helper-functions/helpers';
 
 //css
 import '../../../css/containers/main/menu/TodaysSpecialMenu.css'
+import '../../../index.css';
 
 class CarouselLeftArrow extends Component {
   render() {

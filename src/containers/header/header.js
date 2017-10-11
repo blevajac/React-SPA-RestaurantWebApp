@@ -1,7 +1,8 @@
 import React from 'react';
 
 //css
-import '../../css/containers/header/header.css';
+import '../../index.css';
+//import '../../css/containers/header/header.css';
 
 const Header = () => (
   <header className="w3-display-container w3-content w3-wide" style={{ maxWidth:'1600px', minWwidth: '500px'}} id="home">

@@ -1,5 +1,8 @@
 import React from 'react';
 
+//css
+import '../../../../css/containers/main/about/gallery.css';
+
 const RightArrow = (props) => {
   return (
     <div className="nextArrow" onClick={props.nextSlide}>

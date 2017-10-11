@@ -1,7 +1,8 @@
 import React from 'react';
 
 //css
-import '../../css/containers/footer/footer.css';
+import '../../index.css';
+//import '../../css/containers/footer/footer.css';
 
 const Footer = () => (
   <footer className="w3-center w3-light-grey w3-padding-32">

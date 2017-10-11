@@ -1,9 +1,10 @@
 import React from 'react';
 import {
-  BrowserRouter as Router, Route, Switch, Link
+  BrowserRouter as Router, Route,  Link
 } from 'react-router-dom';
 
 //css
+import '../../../index.css';
 import '../../../css/containers/main/router.css';
 
 //components
@@ -17,24 +18,11 @@ const AboutContainer = () => (
             <li className="router-li"><Link to="/">About</Link></li>
             <li className="router-li"><Link to="/gallery">Gallery</Link></li>
           </ul>
-
           <Route exact path="/" component={About}/>
           <Route path="/gallery" component={Gallery}/>
-
+          <hr></hr>
     </div>
   </Router>
 )
 
-/*
-class AboutContainer extends Component {
-  render() {
-    return (
-      <div className="">
-        <About />
-        <Gallery />
-      </div>
-    );
-  }
-}
-*/
 export default AboutContainer;

@@ -3,6 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
+//css
+import '../../../index.css';
+
 import { compose, withProps, lifecycle, withStateHandlers } from "recompose";
 import {
   withScriptjs,
@@ -160,7 +163,7 @@ const Map = ({ resInformation, address }) => (
     <div className="w3-col m6 w3-padding-large">
       <h1 className="w3-center">{resInformation.restaurantName}</h1>
       <h5 className="w3-center">Tradition since 1889</h5><br></br>
-      
+
       <p className="w3-text-blue-grey w3-large"><b>{address.street} {address.number}, {address.zipcode} {address.city}, {address.country} </b></p><br></br>
       <p>U can contact us all day from 10:00 am - 17:00 pm CET </p>
       <p><strong>Contact number:</strong> <br></br>

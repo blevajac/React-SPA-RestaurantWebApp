@@ -1,5 +1,8 @@
 import React from 'react';
 
+//css
+import '../../../../css/containers/main/about/gallery.css';
+
 const Slide = (props) => {
   const current = props.background[props.current];
 

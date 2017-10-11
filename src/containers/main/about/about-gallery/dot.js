@@ -1,5 +1,8 @@
 import React from 'react';
 
+//css
+import '../../../../css/containers/main/about/gallery.css';
+
 /*
   Dot is the child of Dots, and acts as a presentational component, as well as doubles as an event emitter.
   It displays the dot on the screen, and also can tell the main component(Slider), to change the

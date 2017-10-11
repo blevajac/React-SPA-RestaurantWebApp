@@ -1,7 +1,8 @@
 import React from 'react';
 
 //css
-import '../../css/containers/navbar/navbar.css';
+import '../../index.css';
+//import '../../css/containers/navbar/navbar.css';
 
 const Navbar = () => (
   <div className="w3-top">

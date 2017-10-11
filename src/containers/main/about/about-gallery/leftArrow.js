@@ -1,5 +1,8 @@
 import React from 'react';
 
+//css
+import '../../../../css/containers/main/about/gallery.css';
+
 const LeftArrow = (props) => {
   return (
     <div className="backArrow" onClick={props.previousSlide}>

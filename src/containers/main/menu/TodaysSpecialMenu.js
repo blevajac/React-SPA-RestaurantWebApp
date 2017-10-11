@@ -7,6 +7,9 @@ import TodaysSpecialMenuCarousel from './TodaysSpecialMenuCarousel';
 import h from '../../../helper-functions/helpers';
 //h.formatPrice(count * fish.price)
 
+//css
+import '../../../index.css';
+
 const carouselSlidesData = [
   {
     name: "Sweet Fruit Surprise",
