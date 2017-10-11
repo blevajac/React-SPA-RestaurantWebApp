@@ -26,7 +26,6 @@ class Gallery extends Component {
     this.previousSlide = this.previousSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
     this.dotClick = this.dotClick.bind(this);
-    this.preloadNextImage = this.preloadNextImage.bind(this);    
   }
 
   // Pulls in config data for the slider from .json file
@@ -86,43 +85,47 @@ class Gallery extends Component {
 
   render() {
     return (
-      <div className="w3-row w3-padding-64" id="about">
-        <div className="w3-col m6 w3-padding-large w3-hide-small">
-          <div className="w3-round w3-image w3-opacity-min" style={{ width: "600", height: "750" }}>
-            <div className="slider">
-              {/* The Current Image*/}
-              {
-                this.state.ready ?
-                <Slide
-                  background={this.state.background}
-                  current={this.state.current}
-                  ready={this.state.ready}
-                />
-                : null
-              }
+      <div className="w3-row w3-padding-64" id="about">       
 
-              {/* Arrows */}
-              <LeftArrow previousSlide={this.previousSlide} />
-              <RightArrow nextSlide={this.nextSlide} />
-              {/* Dots */}
-              <Dots
-                numberOfDots={this.state.background.length}
-                isCurrent={this.state.current}
-                dotClick={this.dotClick}
-               />
+        <div>
+          <div className="w3-col m6 w3-padding-large w3-hide-small">
+            <div className="w3-round w3-image w3-opacity-min" style={{ width: "600", height: "750" }}>
 
-               {this.preloadNextImage()}
+              <div className="slider">
+                {/* The Current Image*/}
+                {
+                  this.state.ready ?
+                  <Slide
+                    background={this.state.background}
+                    current={this.state.current}
+                    ready={this.state.ready}
+                  />
+                  : null
+                }
+
+                {/* Arrows */}
+                <LeftArrow previousSlide={this.previousSlide} />
+                <RightArrow nextSlide={this.nextSlide} />
+                {/* Dots */}
+                <Dots
+                  numberOfDots={this.state.background.length}
+                  isCurrent={this.state.current}
+                  dotClick={this.dotClick}
+                 />
+
+                 {this.preloadNextImage()}
+              </div>
             </div>
+
           </div>
 
-        </div>
+          <div className="w3-col m6 w3-padding-large">
+            <h1 className="w3-center">About Catering</h1><br></br>
+            <h5 className="w3-center">Tradition since 1889</h5>
+            <p className="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use <span className="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
+            <p className="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-        <div className="w3-col m6 w3-padding-large">
-          <h1 className="w3-center">About Catering</h1><br></br>
-          <h5 className="w3-center">Tradition since 1889</h5>
-          <p className="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use <span className="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
-          <p className="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
+          </div>
         </div>
       </div>
     );
