@@ -4,7 +4,7 @@ Is a basic Restaurant Information App. That shows (basic) information on a resta
 It consists of three main components. The About component, Contact component and Menu component.
 
 ## About
-The About component consists of two sub presentational components.
+The About component consists of two sub presentational components.  
 The About page that shows the restaurant information and the gallery component that shows pictures of the restaurant through time.
 
 ***  
